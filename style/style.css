@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,200;1,300;1,400;1,500;1,700&display=swap');
+
+
+h6 {
+    font-size: 15px;
+    color: white;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Montserrat",sans-serif;
+
+}
+
+
+/* ====================================================================================================== */
+/* =======================================    BARRA DE NAVEGACION  =====================================*/
+
+header{
+    width:100%;
+    height:100vh;
+    background-image: url(/images/carrusel1.jpg);
+    background-repeat: none repeat;
+    background-position:center;
+    background-size: cover;
+    
+}
+
+
+    nav {
+        height:100px;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        
+}
+
+.logo {
+    width: 6%;
+    margin-left: 16px;
+}
+
+.bar-btr{
+    font-size: 20px;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background-color: rgba(0,0,0,95);
+    text-align: center;
+    transition: all .5s;
+    
+
+}
+
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight:600;
+    
+}
+
+.nav-menu li a.active, nav-menu li a:hover {
+    color: rgba(248,8,8);
+    transition: .3s;
+}
+
+
+/* ACA MANITO OCULTAMOS EL CHECK BUTTON*/
+
+#check{
+    display:none;
+}
+/* Acca se usa la pseudo-clase checked para mostrar el menu responsive cada
+vez que se de click en el icono del menu*/
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+
+}
+
+
+
+/* ====================================================================================================== */
+/* =======================================   VISTA PRINCIPAL   =====================================*/
+
+.banner-text{
+    padding:0 30px;
+    margin: top 150px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom:30px;
+
+}
+
+.banner-text span {
+    color: rgba(248, 8, 8);
+
+}
+
+.banner-text h2 {
+    font-size: 16px;
+    font-weight:600;
+
+}
+
+
+.textCuenta {
+    margin: 1px 0 -1px -54px;
+}
+
+
+.btn-1{
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: rgb(248, 8, 8);
+    color: #fff;
+    border-radius:5px;
+    cursor: pointer;
+    font-weight:600;
+}
+
+/*Aca manito sirve para que tales cuando uno pase el mause se cambie 
+de color añañay*/
+
+.btn-1:hover{
+    background-color: #fff;
+    color: #000;
+    transition: .5s;
+
+}
+
+
+
+.flexInicio{
+    display:flex;
+
+}
+
+.img-Inicio{
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-left: 50px;
+    }
+
+
+.nav{
+    height: 100px;
+}
+
+.bar-btr{
+    display:none;
+}
+
+
+.nav-menu{
+    position :relative;
+    height: 100px;
+    top:0;
+    background: none;
+    transition: none;
+    text-align:right;
+    margin-right: 50px;
+}
+
+.nav-menu li{
+    display:inline-block;
+    line-height: 100px;
+    margin:  0 20px;
+    transition: none;
+
+}
+
+.nav-menu li{
+    font-size: 15px;
+    
+}
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------*/
+.btn-2{
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: rgb(248, 8, 8);
+    border-radius:5px;
+    cursor: pointer;
+    font-weight:600;
+}
+
+
+.btn-2:hover{
+    background-color: rgb(248, 8, 8);
+    color: #fff;
+    transition: .5s;
+
+}
+
+/* ====================================================================================================== */
+/* ===============     F O R M U L A R I O    L O G I N   ===================*/
+
+.bodyLogin{
+    margin : 0;
+    padding : 0;
+    background : url(../images/fondo.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+
+.IamFotter{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+.IamFotter h1{
+    margin : 15px;
+    font-size: 12px;
+    color: darkgrey;
+    text-align: center;
+}
+
+
+
+.login{
+    width: 520px;
+    height: 450px;
+    background: black;
+    color: white;  /** Color del texto **/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
+    box-sizing: border-box;
+    padding: 70px 30px;
+    font-size: 15px;
+
+}
+
+.login .img{
+    width: 100px;
+    height: 100px;
+    border-radius: 45%;
+    position: absolute;
+    top: -50px; 
+    left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
+
+}
+
+.login h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login label{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+.login input{  
+    margin: bottom 20px;
+    width: 100%;
+    font-size: 15px;
+    
+}
+
+.login input[type="text"],
+.login input[type="password"]{  /* Aca lo que hice fue solo modificar los inputs de text y password */
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    margin: 13px 0 12px -5px;
+
+}
+
+.login input[type="submit"] {  
+    border: none;
+    outline: none;
+    background: rgba(54, 53, 53, 0.918);
+    height: 40px;
+    font-size: 18px;
+    border-radius: 15px;
+    color: #fff;
+
+}
+
+.login a{
+    text-decoration: none;
+    line-height: 20px;
+    color: darkgrey; 
+    font-size: 15px;
+}
+
+
+/* ================================================================================*/
+/* ===============     F O R M U L A R I O   R E G  I S T E R   ===================*/
+
+.bodyRegister{
+    margin : 0;
+    padding : 0;
+    background : url(../images/fondo.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+
+.IamFotter{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+.IamFotter h1{
+    margin : 15px;
+    font-size: 12px;
+    color: darkgrey;
+    text-align: center;
+}
+
+
+
+.Register{
+    width: 520px;
+    height: 450px;
+    background: black;
+    color: white;  /** Color del texto **/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
+    box-sizing: border-box;
+    padding: 70px 30px;
+    font-size: 15px;
+
+}
+
+.Register .img{
+    width: 100px;
+    height: 100px;
+    border-radius: 45%;
+    position: absolute;
+    top: -50px; 
+    left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
+
+}
+
+.Register h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.Register label{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+.Register input{  
+    margin: bottom 20px;
+    width: 100%;
+    font-size: 15px;
+    
+}
+
+.Register input[type="text"],
+.Register input[type="password"]{  /* Aca lo que hice fue solo modificar los inputs de text y password */
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+
+}
+
+.Register input[type="submit"] {  
+    border: none;
+    outline: none;
+    background: rgba(54, 53, 53, 0.918);
+    height: 40px;
+    font-size: 18px;
+    border-radius: 15px;
+    color: #fff;
+
+}
+
+.Register a{
+    text-decoration: none;
+    line-height: 20px;
+    color: darkgrey; 
+    font-size: 15px;
+}
+
+
+
+
+
+/* ================================================================================*/
+/* ===============     C   I   T   A   S  ===================*/
+
+
+
+.main{
+    width: 1200px;  /*ancho de la página*/
+    height: 741px;;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: black;
+}
+
+textarea{
+    resize: vertical;
+    width: 490px;
+    height: 78px;
+    resize: none;
+}
+
+
+.citasss{
+    margin: 100px  auto ;
+
+}
+
+.cotiza{
+    color: white;
+    text-align: center;
+}
+
+
+.LineaChimba{
+    background: orangered;
+    width: 41%;
+}
+
+.formulariocitas li{
+    float: right;
+    margin: 5px 50px 0 100px;
+}
+input{
+    border: 1px solid black;
+    outline: none;
+}
+
+.imgcitas{
+    float: left;
+    width: 500px;
+    height: 600px;
+    margin: 0 70px;
+    border-radius: 10px;
+}
+
+.fondocita{
+    background-image: url(../images/fondoatras8.webp);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+.nav-citas a{
+    color: white;
+    
+}
+
+.bg-dark{
+    background-image: url(../images/fondoatras8.webp);
+}
+
+.copyright{
+    text-align: center;
+}
+
+.boton_cita {
+    margin: 12px 0px 18px 1px;
+    width: 491px;
+    height: 30px;
+    border-style: none;
+    background-color: orangered;
+    color: white;
+}
+
+/* ================================================================================*/
+/* ===========================     C   I   T   A   S    ===========================*/
+
+
+
+/*-----------------PERFIL DEL TATUADOR ---------------------------*/
+
+.portafolio-tat img{   /*  PORTAFOLIOS IMAGENES  */
+    margin: 10px 30px 10px 45px;
+    width:  330px;
+    height: 310px;
+
+}
+
+.img-perfil{
+    margin: 0 0 0 550px;
+    border-radius: 90px;
+}
+
+.porta--{
+    margin: 10px  0  0  80px; 
+}
+
+.mapa{
+    margin: 0 0 0 70px;
+    width: 1200px;
+}
+
+.text-pefilee{
+color: white; 
+text-align: center;
+
+}
+
+.footer-perfilee{
+    background-image: url(../images/fondoatras8.webp);
+}
+
+.footer-ubica{
+    background-image: url(../images/fondoatras8.webp);
+}
+
+#boton-tattoo{
+    margin: 0 0 0 480px;
+    width: 400px;
+}
+
+/* ================================================================================*/
+/*-----------------float---------------------------*/
+
+.clear{
+    clear: both;
+}
+
+
