@@ -7,57 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
-  <title>REGISTRO</title>
+  <title>Registrate</title>
 </head>
 <body class="bodyRegister">
+
+
 <!-----------------------------  B A R R A   D E   N A V E G A C I O N   ------------------------------------------------------------------>
 <nav>
   <div>
-      <img class="logo"  src="/images/logo.jpg" alt="">
+        <a href="index.html"><img class="logo"  src="/images/logo.jpg" alt=""></a>
   </div>
   <input type="checkbox" id="check">
   <label for="check" class="bar-btr">
       <i class="fas fa-bars"></i>
   </label>
   <ul class="nav-menu">
-      <li><a class="active"  href=""> Inicio  </a></li>
+      <li><a class="active"  href="index.html"> Inicio  </a></li>
       <li><a href=""> Tatuadores  </a></li>
-      <li><a href=""> Citas  </a></li>
+      <li><a href="citas.html"> Citas  </a></li>
   </ul>
 </nav>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------>
 
 
   <div class="Register">
-    <a href="/vistaPrincipal.html">
-      <img  class="img" src="images/logo.jpg" alt="Imgen de Inicio De Sesion">
-    </a>
-    <h1>REGISTRO</h1>
+    <div>
+      <img  class="img" src="images/logologin.jpg" alt="Imgen de Inicio De Sesion">
+    </div>
+    
     <form>
-
+      <h1 class="tittleRegister">REGISTRATE AHORA MISMO!</h1>
       <!--  NOMBRE DEL USUARIO  -->
       <label for="nombreUsuario">Correo </label>
       <input type="text" placeholder="Ingrese su Correo">
-      <br>
-      <br>
-
+      
       <!--  CONTRASEÑA DEL USUARIO  -->
       <label for="password">Contraseña </label>
       <input type="password" placeholder="Ingrese su Contraseña">
-      <br>
-      <br>
-
+      
       <!--  CONTRASEÑA DEL USUARIO  -->
       <label for="password">Confirmar Contraseña </label>
       <input type="password" placeholder="Ingrese otra vez su Contraseña">
-      <br>
-      <br>
+      
       <input type="submit" value="Registrarse">
-      <br>
-      <br>
-
-      <a href="/login.html"> ¿Ya tienes una cuenta? </a>
-
+    
+      <div class="ContenedoresDeLogin" >
+        <a href="login.html"> ¿Ya tienes una cuenta? </a>
+      </div>
     </form>
   </div>
 

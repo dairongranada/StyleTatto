@@ -2,12 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,200;1,300;1,400;1,500;1,700&display=swap');
 
 
+
+
 h6 {
     font-size: 15px;
     color: white;
 }
 
-
+a{
+    text-decoration: none;
+    list-style: none;
+}
 *{
     padding:0;
     margin:0;
@@ -17,8 +22,10 @@ h6 {
 }
 
 body {
+    background-color: #000;
+    color: #fff;
     font-family:"Montserrat",sans-serif;
-
+    list-style: none;
 }
 
 
@@ -32,22 +39,22 @@ header{
     background-repeat: none repeat;
     background-position:center;
     background-size: cover;
-    
 }
 
 
     nav {
-        height:100px;
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #000;
-        
+    height:100px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
 }
 
+
 .logo {
-    width: 6%;
+    border-radius: 94px;
+    width: 11%;
     margin-left: 16px;
 }
 
@@ -87,6 +94,7 @@ header{
     
 }
 
+
 .nav-menu li a.active, nav-menu li a:hover {
     color: rgba(248,8,8);
     transition: .3s;
@@ -114,11 +122,32 @@ vez que se de click en el icono del menu*/
 
 
 /* ====================================================================================================== */
+/* =======================================    F  O  T  T  E  R    =====================================*/
+
+
+.IamFotter{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+.IamFotter h1{
+    margin : 15px;
+    font-size: 12px;
+    color: darkgrey;
+    text-align: center;
+}
+
+
+/* ====================================================================================================== */
 /* =======================================   VISTA PRINCIPAL   =====================================*/
 
 .banner-text{
+    margin-top: 8%;
     padding:0 30px;
-    margin: top 150px;
     text-align: center;
     color: #fff;
 
@@ -157,100 +186,81 @@ vez que se de click en el icono del menu*/
     font-weight:600;
 }
 
-/*Aca manito sirve para que tales cuando uno pase el mause se cambie 
-de color añañay*/
-
-.btn-1:hover{
-    background-color: #fff;
-    color: #000;
-    transition: .5s;
-
-}
 
 
-
-.flexInicio{
-    display:flex;
-
-}
-
-.img-Inicio{
-    width: 50%;
-    height: 50%;
-}
-
-@media screen and (min-width: 768px) {
-    .logo{
-        margin-left: 50px;
-    }
-
-
-.nav{
-    height: 100px;
-}
-
-.bar-btr{
-    display:none;
-}
-
-
-.nav-menu{
-    position :relative;
-    height: 100px;
-    top:0;
-    background: none;
-    transition: none;
-    text-align:right;
-    margin-right: 50px;
-}
-
-.nav-menu li{
-    display:inline-block;
-    line-height: 100px;
-    margin:  0 20px;
-    transition: none;
-
-}
-
-.nav-menu li{
-    font-size: 15px;
-    
-}
-
-    
-
-}
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------*/
 .btn-2{
     margin-right: 40px;
     padding: 10px 30px;
-    background-color: #fff;
-    color: rgb(248, 8, 8);
+    background-color: rgb(248, 8, 8);
+    color: #fff;
     border-radius:5px;
     cursor: pointer;
     font-weight:600;
 }
 
-
 .btn-2:hover{
-    background-color: rgb(248, 8, 8);
-    color: #fff;
-    transition: .5s;
+    background-color: #fff;
+    color: red;
+    transition: 0.5s;
+    box-shadow:0px 0 40px lightblue;
 
 }
 
+
+
+.ContenedorTatuadores{
+    display: flex;
+    
+}
+
+.ContenedorTatuadores img {
+    height:80%;
+    width:50%;
+    
+}
+
+
+
+
+
+/*
+.flexInicio{
+    display:flex;
+
+}
+                    // Esta mierda nose que es jajajaja
+.img-Inicio{
+    width: 50%;
+    height: 50%;
+}
+
+*/
+
+
+
+
+
+
 /* ====================================================================================================== */
-/* ===============     F O R M U L A R I O    L O G I N   ===================*/
+/* ======================     F O R M U L A R I O    L O G I N   ===================*/
+
+
+.login{
+    
+    width: 35%;
+    height: 470px;
+    background: black;
+    color: white;  /** Color del texto **/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
+    box-sizing: border-box;
+    padding: 70px 30px;
+    font-size: 15px;
+}
+
+
 
 .bodyLogin{
     margin : 0;
@@ -262,48 +272,23 @@ de color añañay*/
 }
 
 
-.IamFotter{
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    color: white;
-}
-
-.IamFotter h1{
-    margin : 15px;
-    font-size: 12px;
-    color: darkgrey;
-    text-align: center;
-}
 
 
 
-.login{
-    width: 520px;
-    height: 450px;
-    background: black;
-    color: white;  /** Color del texto **/
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
-    box-sizing: border-box;
-    padding: 70px 30px;
-    font-size: 15px;
 
-}
-
-.login .img{
+.login img{
     width: 100px;
     height: 100px;
-    border-radius: 45%;
+    border-radius: 50%;
     position: absolute;
     top: -50px; 
     left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
-
 }
+
+.login img:hover{
+    box-shadow: 0 0 20px white;
+}
+
 
 .login h1{
     margin: 0;
@@ -316,6 +301,7 @@ de color añañay*/
     margin: 0;
     padding: 0;
     display: block;
+    padding: 11px 0 8px;
 }
 
 
@@ -334,7 +320,7 @@ de color añañay*/
     outline: none;
     height: 40px;
     color: #fff;
-    margin: 13px 0 12px -5px;
+    
 
 }
 
@@ -346,51 +332,41 @@ de color añañay*/
     font-size: 18px;
     border-radius: 15px;
     color: #fff;
-
+    margin-top: 8%;
 }
+
+
+.login input[type="submit"]:hover { 
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+
 
 .login a{
     text-decoration: none;
     line-height: 20px;
     color: darkgrey; 
     font-size: 15px;
+    margin-left: 34px;
 }
+
+
+
+.ContenedoresDeLogin a:hover{
+    color: aqua;
+    margin-top: 21px;
+}
+
 
 
 /* ================================================================================*/
 /* ===============     F O R M U L A R I O   R E G  I S T E R   ===================*/
 
-.bodyRegister{
-    margin : 0;
-    padding : 0;
-    background : url(../images/fondo.jpg);
-    background-size: cover;
-    font-family: sans-serif;
-    height: 100vh;
-}
-
-
-.IamFotter{
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    color: white;
-}
-
-.IamFotter h1{
-    margin : 15px;
-    font-size: 12px;
-    color: darkgrey;
-    text-align: center;
-}
-
-
 
 .Register{
-    width: 520px;
-    height: 450px;
+
+    width: 35%;
+    height: 480px;
     background: black;
     color: white;  /** Color del texto **/
     top: 50%;
@@ -403,14 +379,29 @@ de color añañay*/
 
 }
 
-.Register .img{
+
+.bodyRegister{
+    margin : 0;
+    padding : 0;
+    background : url(../images/fondo.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+
+.Register img{
     width: 100px;
     height: 100px;
-    border-radius: 45%;
+    border-radius: 50%;
     position: absolute;
     top: -50px; 
     left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
+}
 
+
+.Register img:hover{
+    box-shadow: 0 0 20px white;
 }
 
 .Register h1{
@@ -424,6 +415,7 @@ de color añañay*/
     margin: 0;
     padding: 0;
     display: block;
+    padding: 10px 0 4px;
 }
 
 
@@ -442,6 +434,7 @@ de color añañay*/
     outline: none;
     height: 40px;
     color: #fff;
+    
 
 }
 
@@ -453,8 +446,13 @@ de color añañay*/
     font-size: 18px;
     border-radius: 15px;
     color: #fff;
-
 }
+
+.Register input[type="submit"]:hover { 
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+
 
 .Register a{
     text-decoration: none;
@@ -468,59 +466,28 @@ de color añañay*/
 
 
 /* ================================================================================*/
-/* ===============     C   I   T   A   S  ===================*/
+/* ===========================     C   I   T   A   S  =============================*/
 
 
+/* Contenedores Padre */
 
-.main{
-    width: 1200px;  /*ancho de la página*/
-    height: 741px;;
-    margin: 20px auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    background: black;
-}
-
-textarea{
-    resize: vertical;
-    width: 490px;
-    height: 78px;
-    resize: none;
+.Contenedor-Citas{
+    display: flex;
+    align-items: center;
 }
 
 
-.citasss{
-    margin: 100px  auto ;
-
+/* Contenedores hijos */
+.ConteCitas1{
+    width: 50%;
 }
 
-.cotiza{
-    color: white;
-    text-align: center;
+.ConteCitas2{
+    width: 50%;
 }
+/* ----------------- */
 
 
-.LineaChimba{
-    background: orangered;
-    width: 41%;
-}
-
-.formulariocitas li{
-    float: right;
-    margin: 5px 50px 0 100px;
-}
-input{
-    border: 1px solid black;
-    outline: none;
-}
-
-.imgcitas{
-    float: left;
-    width: 500px;
-    height: 600px;
-    margin: 0 70px;
-    border-radius: 10px;
-}
 
 .fondocita{
     background-image: url(../images/fondoatras8.webp);
@@ -529,80 +496,111 @@ input{
     background-size:cover;
 }
 
-.nav-citas a{
-    color: white;
+
+.main{
+    margin-top: 100px;
+    width: 90%; 
+    height: 90%;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: black;
+}
+
+input{
+    color: #000;
+    border: none;
+    margin-bottom: 20px;
+    background-color: darkgray;
     
+}   
+
+.imgcitas{
+    padding: 20px;
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+}   
+
+.LineaChimba{
+    background-color: rgba(248,8,8);
+    width: 95%;
 }
 
-.bg-dark{
-    background-image: url(../images/fondoatras8.webp);
-}
-
-.copyright{
+.cotiza{
+    color: white;
     text-align: center;
 }
 
+
+textarea{
+    resize: vertical;
+    width: 82%;
+    height: 78px;
+    resize: none;
+}
+
+
+.formulariocitas li{
+    margin: 5px 50px 0 100px;
+}
+
+
+
 .boton_cita {
     margin: 12px 0px 18px 1px;
-    width: 491px;
+    width: 82%;
     height: 30px;
     border-style: none;
-    background-color: orangered;
+    background-color: rgba(248,8,8);
     color: white;
 }
 
-/* ================================================================================*/
-/* ===========================     C   I   T   A   S    ===========================*/
 
 
 
-/*-----------------PERFIL DEL TATUADOR ---------------------------*/
+@media(min-width: 868px) {
 
-.portafolio-tat img{   /*  PORTAFOLIOS IMAGENES  */
-    margin: 10px 30px 10px 45px;
-    width:  330px;
-    height: 310px;
+    /* ========  BARRA DE NAV  ========*/
 
-}
 
-.img-perfil{
-    margin: 0 0 0 550px;
-    border-radius: 90px;
-}
+    .logo{
+        margin-left: 50px;
+    }
 
-.porta--{
-    margin: 10px  0  0  80px; 
-}
 
-.mapa{
-    margin: 0 0 0 70px;
-    width: 1200px;
-}
+    .nav{
+        height: 100px;
+    }
 
-.text-pefilee{
-color: white; 
-text-align: center;
+    .bar-btr{
+        display:none;
+    }
 
-}
 
-.footer-perfilee{
-    background-image: url(../images/fondoatras8.webp);
-}
+    .nav-menu{
+        position :relative;
+        height: 100px;
+        top:0;
+        background: none;
+        transition: none;
+        text-align:right;
+        margin-right: 50px;
+    }
 
-.footer-ubica{
-    background-image: url(../images/fondoatras8.webp);
-}
+    .nav-menu li{
+        display:inline-block;
+        line-height: 100px;
+        margin:  0 20px;
+        transition: none;
 
-#boton-tattoo{
-    margin: 0 0 0 480px;
-    width: 400px;
-}
+    }
 
-/* ================================================================================*/
-/*-----------------float---------------------------*/
-
-.clear{
-    clear: both;
+    .nav-menu li{
+        font-size: 15px;
+        
+    }
 }
 
 
+    
