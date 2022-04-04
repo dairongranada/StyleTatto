@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=PT+Serif:ital,wght@1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
 h6 {
     font-size: 15px;
@@ -18,6 +18,7 @@ a{
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'IBM Plex Serif', serif;
 }
 
 body {
@@ -26,6 +27,125 @@ body {
     color: #fff;
     list-style: none;
 }
+
+
+
+/* =========================================================================== */
+/* ========================  BOTON VER MAS TATUADORES   =======================*/
+
+.Contenerdor-Ver-mas{
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BotonDeVerMas li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 5px solid #d1722ae2;
+    border-radius: 8px;
+    width: 230px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    --c: #d1722ae2; /* Color De los Circulos */
+}
+.BotonDeVerMas li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+.BotonDeVerMas li:hover {
+    color: rgb(255, 247, 247);
+}
+.BotonDeVerMas li:hover span {
+    transform: translateY(0) scale(2);
+}
+.BotonDeVerMas li span:nth-child(1) {
+    --n: 1;
+}
+.BotonDeVerMas li span:nth-child(2) {
+    --n: 2;
+}
+.BotonDeVerMas li span:nth-child(3) {
+    --n: 3;
+}
+.BotonDeVerMas li span:nth-child(4) {
+    --n: 4;
+}
+
+/* =========================================================================== */
+/* ==============================  BOTON CITAS   ==============================*/
+
+.Contenerdor-BotonCitas{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.BotonCitas li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 5px solid #d1722ae2;
+    border-radius: 8px;
+    width: 200px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    --c: #d1722ae2; /* Color De los Circulos */
+}
+.BotonCitas li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+.BotonCitas li:hover {
+    color: rgb(255, 247, 247);
+}
+.BotonCitas li:hover span {
+    transform: translateY(0) scale(2);
+}
+.BotonCitas li span:nth-child(1) {
+    --n: 1;
+}
+.BotonCitas li span:nth-child(2) {
+    --n: 2;
+}
+.BotonCitas li span:nth-child(3) {
+    --n: 3;
+}
+.BotonCitas li span:nth-child(4) {
+    --n: 4;
+}
+
+
+
+
+
 
 /* ====================================================================================================== */
 /* =======================================    BARRA DE NAVEGACION  =====================================*/
@@ -118,12 +238,55 @@ vez que se de click en el icono del menu*/
 }
 
 
+@media(min-width: 868px) {
+
+    /* ========  BARRA DE NAV  ========*/
+
+
+    .logo{
+        margin-left: 50px;
+    }
+
+
+    .nav{
+        height: 100px;
+    }
+
+    .bar-btr{
+        display:none;
+    }
+
+
+    .nav-menu{
+        position :relative;
+        height: 100px;
+        top:0;
+        background: none;
+        transition: none;
+        text-align:right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li{
+        display:inline-block;
+        line-height: 100px;
+        margin:  0 20px;
+        transition: none;
+
+    }
+
+    .nav-menu li{
+        font-size: 15px;
+        
+    }
+}
+
 
 /* ====================================================================================================== */
 /* =======================================    F  O  T  T  E  R    =====================================*/
 
 .IamFotterFormu{
-    box-shadow: 1px 7px 22px #fff;
+    box-shadow: 1px 1px 4px #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,8 +300,8 @@ vez que se de click en el icono del menu*/
 }
 
 .IamFotterFormu h1{
-    margin : 15px;
-    font-size: 12px;
+    margin : 25px;
+    font-size: 16px;
     color: darkgrey;
     text-align: center;
 }
@@ -147,18 +310,18 @@ vez que se de click en el icono del menu*/
 
 
 .IamFotter{
-    box-shadow: 1px 7px 22px #fff;
+    box-shadow: 1px 1px 4px #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
     width: 100%;
-    height: 90px;
+    height: 40px;
     color: white;
 }
 
 .IamFotter h1{
-    font-size: 12px;
+    font-size: 16px;
     color: darkgrey;
 }
 
@@ -280,7 +443,7 @@ vez que se de click en el icono del menu*/
 
 .FondoArtistas{
     background-color: rgba(169, 169, 169, 0.137);
-    height: 850px;
+    height: 900px;
 }
 
 .TitileArtistass {
@@ -472,19 +635,16 @@ vez que se de click en el icono del menu*/
 
 
 .login{
-    box-shadow: 10px 1px 50px #fff;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    width: 30%;
-    height: 480px;
+    width: 40%;
+    height: 450px;
     background: black;
-    color: white;  /** Color del texto **/
-    top: 50%;
+    color: white;
+    top: 65%;
     left: 50%;
     position: absolute;
-    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
+    transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 41px 40px;
     font-size: 15px;
 }
 
@@ -498,12 +658,6 @@ vez que se de click en el icono del menu*/
     font-family: sans-serif;
     height: 100vh;
 }
-
-
-
-
-
-
 .login img{
     width: 100px;
     height: 100px;
@@ -532,7 +686,6 @@ vez que se de click en el icono del menu*/
     padding: 11px 0 8px;
 }
 
-
 .login input{  
     margin: bottom 20px;
     width: 100%;
@@ -548,8 +701,6 @@ vez que se de click en el icono del menu*/
     outline: none;
     height: 40px;
     color: #fff;
-    
-
 }
 
 .login input[type="submit"] {  
@@ -568,8 +719,6 @@ vez que se de click en el icono del menu*/
     background-color: rgba(255, 255, 255, 0.26);
 }
 
-
-
 .login a{
     text-decoration: none;
     line-height: 20px;
@@ -578,18 +727,15 @@ vez que se de click en el icono del menu*/
     margin-left: 14px;
 }
 
-
-
 .ContenedoresDeLogin a:hover{
     color: aqua;
 }
 
-
 .ContenedoresDeLogin{
     display: flex;
     justify-content: space-evenly;
+    gap: 50px;
 }
-
 
 
 /* ================================================================================*/
@@ -597,23 +743,18 @@ vez que se de click en el icono del menu*/
 
 
 .Register{
-    box-shadow: 10px 1px 50px #fff;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    width: 30%;
-    height: 480px;
+    width: 40%;
+    height: 500px;
     background: black;
-    color: white;  /** Color del texto **/
-    top: 50%;
+    color: white;
+    top: 65%;
     left: 50%;
     position: absolute;
-    transform:translate(-50%,-50%); /** el transform sirve para centrar el div  **/
+    transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 41px 40px;
     font-size: 15px;
-
 }
-
 
 .bodyRegister{
     margin : 0;
@@ -624,7 +765,6 @@ vez que se de click en el icono del menu*/
     height: 100vh;
 }
 
-
 .Register img{
     width: 100px;
     height: 100px;
@@ -633,7 +773,6 @@ vez que se de click en el icono del menu*/
     top: -50px; 
     left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
 }
-
 
 .Register img:hover{
     box-shadow: 0 0 20px white;
@@ -645,7 +784,6 @@ vez que se de click en el icono del menu*/
     text-align: center;
     font-size: 22px;
 }
-
 .Register label{
     margin: 0;
     padding: 0;
@@ -653,14 +791,12 @@ vez que se de click en el icono del menu*/
     padding: 10px 0 4px;
 }
 
-
 .Register input{  
     margin: bottom 20px;
     width: 100%;
     font-size: 15px;
     
 }
-
 .Register input[type="text"],
 .Register input[type="password"]{  /* Aca lo que hice fue solo modificar los inputs de text y password */
     border: none;
@@ -672,7 +808,6 @@ vez que se de click en el icono del menu*/
     
 
 }
-
 .Register input[type="submit"] {  
     border: none;
     outline: none;
@@ -687,14 +822,16 @@ vez que se de click en el icono del menu*/
     background-color: rgba(255, 255, 255, 0.26);
 }
 
-
-
 .Register a{
     text-decoration: none;
     line-height: 20px;
     color: darkgrey; 
     font-size: 15px;
 }
+.ContenedoresDeRegister a:hover{
+    color: aqua;
+}
+
 
 .ContenedoresDeRegister {
     display: flex;
@@ -795,51 +932,103 @@ textarea{
     color: white;
 }
 
+    
+/* ====================================================================================================== */
+/* ==================================   P E R F I L   T A T U A D O R   =================================*/
 
+.AtrasInfoTatuador{
+    background-color: rgba(169, 169, 169, 0.137);
+    width: 100%;
+    height: 730px;
+}
 
+.InfoTatuador h1{
+    margin: 2%;
+}
 
-@media(min-width: 868px) {
+.InfoTatuador img{
+    border-radius: 50%;
+}
 
-    /* ========  BARRA DE NAV  ========*/
-
-
-    .logo{
-        margin-left: 50px;
-    }
-
-
-    .nav{
-        height: 100px;
-    }
-
-    .bar-btr{
-        display:none;
-    }
-
-
-    .nav-menu{
-        position :relative;
-        height: 100px;
-        top:0;
-        background: none;
-        transition: none;
-        text-align:right;
-        margin-right: 50px;
-    }
-
-    .nav-menu li{
-        display:inline-block;
-        line-height: 100px;
-        margin:  0 20px;
-        transition: none;
-
-    }
-
-    .nav-menu li{
-        font-size: 15px;
-        
-    }
+.InfoTatuador p{
+    color: rgba(255, 255, 255, 0.63);
+    width: 35%;
+    text-align: justify;
 }
 
 
+.InfoTatuador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.C-PortafolioTatuador{
+    height: 1012px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.C-PortafolioTatuador h1{
+    color: #d1722a;
+    font-size: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PortafolioTatuador{
+    font-size: 350%;
+    margin-top: 4%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.img-thumbnail{
+    width: 22%;
+    border: 3px solid white;
+}
+
+.UbicacionBack{
+    height: 730px;
+    width: 100%;
+    background-image: url(../images/fondoatras15.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ubictatto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    gap: 28px;
+}
+.ubictatto h1{
+    text-shadow: 1px 3px 80px #000;
+    color: #d1722a;
+    font-size: 3.5em;
+    display: flex;
     
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa{
+    box-shadow: 1px 3px 20px #000;
+    width: 100%;
+}
+
+
+
