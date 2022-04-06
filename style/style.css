@@ -88,62 +88,12 @@ body {
 /* =========================================================================== */
 /* ==============================  BOTON CITAS   ==============================*/
 
-.Contenerdor-BotonCitas{
-    margin-top: 2%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.BotonCitas li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.BotonPerfilTattuadores li{
     font-size: 20px;
-    border: 5px solid #d1722ae2;
-    border-radius: 8px;
-    width: 200px;
-    height: 55px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.5s;
-    --c: #d1722ae2; /* Color De los Circulos */
+    width: 150px;
+    display: flex;
+    align-items: center;
 }
-.BotonCitas li span {
-    position: absolute;
-    width: 25%;
-    height: 100%;
-    background-color: var(--c);
-    transform: translateY(150%);
-    border-radius: 50%;
-    left: calc((var(--n) - 1) * 25%);
-    transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
-    z-index: -1;
-}
-.BotonCitas li:hover {
-    color: rgb(255, 247, 247);
-}
-.BotonCitas li:hover span {
-    transform: translateY(0) scale(2);
-}
-.BotonCitas li span:nth-child(1) {
-    --n: 1;
-}
-.BotonCitas li span:nth-child(2) {
-    --n: 2;
-}
-.BotonCitas li span:nth-child(3) {
-    --n: 3;
-}
-.BotonCitas li span:nth-child(4) {
-    --n: 4;
-}
-
-
-
 
 
 
@@ -627,6 +577,33 @@ vez que se de click en el icono del menu*/
     width: 90%;
 }
 
+/* ====================================================================================================== */
+/* ==================================    U S E R   O  R    T A T T O   ===================================*/
+
+
+
+.backCircles{
+    width: 100%;
+    height: 830px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.CirclesU-or-T{
+    background-color: rgba(169, 169, 169, 0.137);
+    border-radius: 50%;
+    width: 35%;
+    height: 550px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -932,7 +909,82 @@ textarea{
     color: white;
 }
 
-    
+/* ====================================================================================================== */
+/* ==================================    T  A  T  U  A  D  O  R  E  S   =================================*/
+.SectionTatuadores{
+    background-color: rgba(146, 145, 145, 0.1);
+}
+
+.titleSectionTatuadores{
+    text-shadow: 5px 1px 1px rgb(0, 0, 0);
+    color: #d1722a;
+    width: 100%;
+    height: 180px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerPrincipal{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.containerSecundario{
+    background-color: rgb(255, 251, 251);
+    box-shadow: 0 1px 5px  rgba(17, 17, 17, 0.829);
+    width: 36%;
+    height: 35em;
+    border-radius: 25px;
+    transition: 1.1s;
+}
+
+.containerSecundario2{
+    margin-top: 35px;
+}
+
+.ImagenTatuadores{
+    border-radius: 10px 10px 0 0;
+    height: 45vh;
+    width: 100%;
+    filter:grayscale(100%);
+}
+
+.ImagenTatuadores img{
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 45vh;
+    width: 100%;
+    transition: 1.1s;
+}
+
+.tatuadoresSeccion2{
+    margin-bottom: 55px;
+}
+
+.InfoTatuadores {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: #000;
+    align-items: center;
+}
+
+.ParrafoTatuadores{
+    text-align: justify;
+    color: #000;
+    margin: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+
 /* ====================================================================================================== */
 /* ==================================   P E R F I L   T A T U A D O R   =================================*/
 
@@ -996,6 +1048,7 @@ textarea{
     border: 3px solid white;
 }
 
+
 .UbicacionBack{
     height: 730px;
     width: 100%;
@@ -1019,8 +1072,7 @@ textarea{
     text-shadow: 1px 3px 80px #000;
     color: #d1722a;
     font-size: 3.5em;
-    display: flex;
-    
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
@@ -1029,6 +1081,3 @@ textarea{
     box-shadow: 1px 3px 20px #000;
     width: 100%;
 }
-
-
-
