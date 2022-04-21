@@ -876,7 +876,7 @@ input{
 }   
 
 .LineaChimba{
-    background-color: rgba(248,8,8);
+    background-color: #d17222ae2;
     width: 95%;
 }
 
@@ -905,7 +905,8 @@ textarea{
     width: 82%;
     height: 30px;
     border-style: none;
-    background-color: rgba(248,8,8);
+    background-color: #d17222ae2;
+    border-box:25px;
     color: white;
 }
 
