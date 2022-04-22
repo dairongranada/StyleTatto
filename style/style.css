@@ -913,7 +913,7 @@ textarea{
 /* ====================================================================================================== */
 /* ==================================    T  A  T  U  A  D  O  R  E  S   =================================*/
 .SectionTatuadores{
-    background-color: rgba(146, 145, 145, 0.1);
+    background-color: #ddd;
 }
 
 .titleSectionTatuadores{
@@ -937,13 +937,15 @@ textarea{
     background-color: rgb(255, 251, 251);
     box-shadow: 0 1px 5px  rgba(17, 17, 17, 0.829);
     width: 36%;
-    height: 35em;
+    height: auto;
     border-radius: 25px;
     transition: 1.1s;
+    margin-bottom: 55px;
 }
 
 .containerSecundario2{
     margin-top: 35px;
+    margin-bottom: 5%;
 }
 
 .ImagenTatuadores{
@@ -964,9 +966,7 @@ textarea{
     transition: 1.1s;
 }
 
-.tatuadoresSeccion2{
-    margin-bottom: 55px;
-}
+
 
 .InfoTatuadores {
     display: flex;
