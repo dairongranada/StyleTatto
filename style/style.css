@@ -52,37 +52,26 @@ body {
     position: relative;
     overflow: hidden;
     transition: 0.5s;
-    --c: #d1722ae2; /* Color De los Circulos */
+    --circulos: #d1722ae2; /* Color De los Circulos */
 }
 .BotonDeVerMas li span {
     position: absolute;
     width: 25%;
     height: 100%;
-    background-color: var(--c);
+    background-color: var(--circulos);
     transform: translateY(150%);
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
     transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
     z-index: -1;
+    transition: 1.5s;
 }
 .BotonDeVerMas li:hover {
     color: rgb(255, 247, 247);
 }
 .BotonDeVerMas li:hover span {
-    transform: translateY(0) scale(2);
-}
-.BotonDeVerMas li span:nth-child(1) {
-    --n: 1;
-}
-.BotonDeVerMas li span:nth-child(2) {
-    --n: 2;
-}
-.BotonDeVerMas li span:nth-child(3) {
-    --n: 3;
-}
-.BotonDeVerMas li span:nth-child(4) {
-    --n: 4;
+    transform: scale(8);
+    
 }
 
 /* =========================================================================== */
