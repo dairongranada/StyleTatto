@@ -2,32 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=PT+Serif:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
-h6 {
-    font-size: 15px;
-    color: white;
+/* VARIABLES COLORES  */
+:root{
+    --colorPrincipal:#c07133;
+    --colorSecundario: #b0b0b0;
+    --colorNegro: #000;
+    --colorVerde: #17FF00;
+    --colorRojo: #FF0C0C;
+    --colorAzul: #0040FF;
 }
 
-a{
-    text-decoration: none;
-    list-style: none;
-    color:  rgba(255, 255, 255, 0.459);
-}
-*{
+
+*{  
     padding:0;
     margin:0;
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
     font-family: 'IBM Plex Serif', serif;
 }
 
-body {
-    background-color: #000;
-    font-family: 'IBM Plex Serif', serif;
-    color: #fff;
-    list-style: none;
-}
+body {background-color: #000;color: #fff; text-decoration: none;list-style: none;}
 
+.bodyFomularios{background-image: url(../images/fondo.jpg);background-size: cover;background-position: center;}
 
 
 /* =========================================================================== */
@@ -40,20 +37,22 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .BotonDeVerMas li {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    border: 5px solid #d1722ae2;
+    border: 5px solid var(--colorPrincipal);
     border-radius: 8px;
     width: 230px;
     height: 55px;
     position: relative;
     overflow: hidden;
     transition: 0.5s;
-    --circulos: #d1722ae2; /* Color De los Circulos */
+    --circulos: var(--colorPrincipal); /* Color De los Circulos */
 }
+
 .BotonDeVerMas li span {
     position: absolute;
     width: 25%;
@@ -83,141 +82,90 @@ body {
     display: flex;
     align-items: center;
 }
-
-
-
 /* ====================================================================================================== */
 /* =======================================    BARRA DE NAVEGACION  =====================================*/
-
-header{
-    width:100%;
-    height:100vh;
-    background-image: url(/images/carrusel1.jpg);
-    background-repeat: none repeat;
-    background-position:center;
-    background-size: cover;
-}
-
-
-    nav {
-    height:100px;
-    width:100%;
+nav {
+    background-color: var(--colorNegro);
+    height: 70px;
+    color: rgb(255, 255, 255);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    justify-content: space-between;
+}
+.mainMenu {
+    display: flex;
 }
 
-
-.logo {
-    border-radius: 94px;
-    width: 11%;
-    margin-left: 16px;
-}
-
-.bar-btr{
-    font-size: 20px;
-    color: #fff;
-    margin-right: 20px;
-    cursor: pointer;
-
-}
-
-.nav-menu{
-    position: fixed;
-    width: 100%;
-    height: 0vh;
-    top: 100px;
-    background-color: rgba(0,0,0,95);
-    text-align: center;
-    transition: all .5s;
-    
-
-}
-
-
-.nav-menu li{
-    display: none;
-    line-height: 30px;
-    margin: 50px 0;
-    transition: all .5s;
-}
-
-.nav-menu li a{
-    color: #fff;
-    font-size: 20px;
+.mainMenu li a {
+    display: inline-block;
+    text-decoration: none;
     text-transform: uppercase;
-    font-weight:600;
-    
+    font-size: 5px;
+    padding: 33px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+.mainMenu li a:hover {
+    color:  var(--colorPrincipal);
+}
+.openMenu {
+font-size: 2rem;
+margin: 20px;
+display: none;
+cursor: pointer;
+}
+.mainMenu .closeMenu{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
 }
 
-
-.nav-menu li a.active, nav-menu li a:hover {
-    color: #d1722a;
-    transition: .3s;
+.TextNav h1{
+    padding: 20px;
+    margin: 6px;
+    cursor: pointer;
 }
 
-
-/* ACA MANITO OCULTAMOS EL CHECK BUTTON*/
-
-#check{
-    display:none;
+.TextNav img {
+    width: 70px;
+    margin: 23px;
 }
-/* Acca se usa la pseudo-clase checked para mostrar el menu responsive cada
-vez que se de click en el icono del menu*/
 
-#check:checked ~ .nav-menu{
+@media (max-width: 800px) {
+.mainMenu {
     height: 100vh;
-
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--colorNegro);
+    transition: top 1s ease 0s;
+    display: none;
 }
-
-#check:checked ~ .nav-menu li {
+.mainMenu .closeMenu {
     display: block;
-
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.openMenu {
+    display: block;
 }
 
+.mainMenu li a {
+    margin: 10px;
+    padding: 15px;
+    font-size: 30px;
+}
+.mainMenu li a:hover {
+    color:  var(--colorPrincipal);
+}
 
-@media(min-width: 868px) {
-
-    /* ========  BARRA DE NAV  ========*/
-
-
-    .logo{
-        margin-left: 50px;
-    }
-
-
-    .nav{
-        height: 100px;
-    }
-
-    .bar-btr{
-        display:none;
-    }
-
-
-    .nav-menu{
-        position :relative;
-        height: 100px;
-        top:0;
-        background: none;
-        transition: none;
-        text-align:right;
-        margin-right: 50px;
-    }
-
-    .nav-menu li{
-        display:inline-block;
-        line-height: 100px;
-        margin:  0 20px;
-        transition: none;
-
-    }
-
-    .nav-menu li{
-        font-size: 15px;
-        
-    }
 }
 
 
@@ -268,8 +216,18 @@ vez que se de click en el icono del menu*/
 /* ====================================================================================================== */
 /* =======================================   VISTA PRINCIPAL   =====================================*/
 
+
+header{
+    width:100%;
+    height:100vh;
+    background-image: url(/images/carrusel1.jpg);
+    background-repeat: none repeat;
+    background-position:center;
+    background-size: cover;
+}
+
 .banner-text{
-    height: 500px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,15 +247,13 @@ vez que se de click en el icono del menu*/
 }
 
 .banner-text span {
-    color: #c07133;
+    color: var(--colorPrincipal);
 }
 
 .NoTenercuenta{
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: 50px;
-    align-items: center;
+
 }
 
 
@@ -310,7 +266,7 @@ vez que se de click en el icono del menu*/
 .btn-1{
     margin-right: 40px;
     padding: 10px 30px;
-    background-color: #d1722a;
+    background-color: var(--colorPrincipal);
     color: #fff;
     border-radius:5px;
     cursor: pointer;
@@ -320,17 +276,16 @@ vez que se de click en el icono del menu*/
 
 .btn-1:hover{
     background-color: #fff;
-    color: #d1722a;
+    color: var(--colorPrincipal);
     transition: 0.5s;
     box-shadow:0px 0 30px lightblue;
     padding: 12px 32px;
-
 }
 
 .btn-2{
     margin-right: 40px;
     padding: 10px 30px;
-    background-color: #d1722a;
+    background-color: var(--colorPrincipal);
     color: #fff;
     border-radius:5px;
     cursor: pointer;
@@ -340,49 +295,31 @@ vez que se de click en el icono del menu*/
 
 .btn-2:hover{
     background-color: #fff;
-    color: #d1722a;
+    color: var(--colorPrincipal);
     transition: 0.5s;
     box-shadow:0px 0 30px lightblue;
     padding: 12px 32px;
 
 }
 
-
-
 .ContenedorTatuadores{
     display: flex;
-    
 }
 
 .ContenedorTatuadores img {
     height:80%;
     width:50%;
-    
 }
 
 
 
 
-
-/*
-.flexInicio{
-    display:flex;
-
-}
-                    Esta mierda nose que es jajajaja
-.img-Inicio{
-    width: 50%;
-    height: 50%;
-}
-
-*/
-
-
-                    /*  A R T I S T A S  */
+/*====================      A  R  T  I  S  T  A  S      =====================*/
 
 .FondoArtistas{
     background-color: rgba(169, 169, 169, 0.137);
-    height: 900px;
+    height: 100%;
+    padding: 50px;
 }
 
 .TitileArtistass {
@@ -395,45 +332,42 @@ vez que se de click en el icono del menu*/
 }
 
 
-
-
 .ParrafArtistass {
+    width: 100%;
+    height: 50%;
     color: rgba(255, 255, 255, 0.63);
     font-size: 18px;
-    height: 150px;
+    height: 288px;
     display: flex;
     padding: 24px 10%;
     align-items: center;
-    
-
+    text-align: justify;
 }
 
 .ArtistasIndex{
-    margin-right: 6%;
-    display: flex;
-    justify-content: space-evenly;
-    
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    justify-items: center;
+    transition: 1.1s;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
 
 }
 
 .ArtistasIndex img{
-    width: 125%;
-    height: 80%;
-    background-color: rgba(31,31,31, 0.9);
-    border-radius: 20px;
-    transition: 1.1s;
+    width: 450px;
+    height: 478px;
+    margin-top: 12px;
+    border: 2px solid var(--colorSecundario);
+    box-shadow: 1px 10px 25px #000;
+    filter: grayscale(100);
+    transition: 2s;
 }
 
-.ArtistasIndex img:hover{
-    transition: all 0.7s;
-    transform: scale(1.0);
-    box-shadow: 2px 3px 15px #fff;
-
-}
-
-            /*  N U E S T R O S    S E R V C I O S */
 
 
+/*====================      N U E S T R O S    S E R V C I O S     =====================*/
 
 .FondoServicios{
     background-image: url(../images/fondoatras15.jpg);
@@ -442,7 +376,6 @@ vez que se de click en el icono del menu*/
     background-position: center;
 }
 .TitileServicios {
-    margin: -2%;
     width: 100%;
     height: 250px;
     display: flex;
@@ -458,7 +391,6 @@ vez que se de click en el icono del menu*/
     font-size: 35px;
 }
 
-/*---------------------*/
 
 .P-ContenedorServicios{
     margin: 3% 7% 7% 3%;
@@ -480,6 +412,8 @@ vez que se de click en el icono del menu*/
     justify-content: space-between;
 }
 
+
+
 .TattoServicios img{
     width: 80px;
     transition: 1.1s;
@@ -497,7 +431,7 @@ vez que se de click en el icono del menu*/
 }
 
 
-/*--------   PIERCINGS -------------*/
+/*--------   P I E R C I N G S -------------*/
 
 
 .pircingsServicios{
@@ -538,7 +472,7 @@ vez que se de click en el icono del menu*/
     height: 220px;
     align-items: center;
     justify-content: center;
-    color: #d1722a;
+    color: var(--colorPrincipal);
     
 }
 
@@ -596,27 +530,35 @@ vez que se de click en el icono del menu*/
 
 
 
-/* ====================================================================================================== */
+/* ================================================================================ */
 /* ======================     F O R M U L A R I O    L O G I N   ===================*/
 
-
-.login{
-    width: 40%;
-    height: 450px;
-    background: black;
-    color: white;
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 41px 40px;
-    font-size: 15px;
+.containerlogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 88vh;
 }
 
+.login h1{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
 
+.login{
+    background-color: var(--colorNegro);
+    width: 380px;
+    height: 450px;
+    padding: 22px;
+    font-size: 15px;
+    color: white;
+    box-sizing: border-box;
 
-.bodyLogin{
+}
+
+.bodylogin{
     margin : 0;
     padding : 0;
     background : url(../images/fondo.jpg);
@@ -624,39 +566,35 @@ vez que se de click en el icono del menu*/
     font-family: sans-serif;
     height: 100vh;
 }
-.login img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px; 
-    left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
-}
-
-.login img:hover{
-    box-shadow: 0 0 20px white;
-}
 
 
-.login h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
+/*==========================*/
 
-.login label{
-    margin: 0;
-    padding: 0;
+.login input{
+    margin-top: 20px;
     display: block;
-    padding: 11px 0 8px;
-}
-
-.login input{  
     margin: bottom 20px;
     width: 100%;
     font-size: 15px;
-    
+}
+
+.grupLogin{
+    position: relative;
+    margin-top: 36px;
+}
+
+.login label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: .3s ;
+    pointer-events: none;
+    color: #424949;
+}
+
+.login input:focus~label,input:valid~label{
+    top: -10px;
+    color: #fff;
 }
 
 .login input[type="text"],
@@ -669,60 +607,64 @@ vez que se de click en el icono del menu*/
     color: #fff;
 }
 
-.login input[type="submit"] {  
-    border: none;
-    outline: none;
-    background: rgba(54, 53, 53, 0.918);
+.login button {  
+    width: 100%;
     height: 40px;
     font-size: 18px;
-    border-radius: 15px;
-    color: #fff;
+    border: none;
     margin-top: 4%;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--colorPrincipal);
+    margin: 30px 0 20px;
 }
 
 
-.login input[type="submit"]:hover { 
-    background-color: rgba(255, 255, 255, 0.26);
-}
 
-.login a{
-    text-decoration: none;
-    line-height: 20px;
-    color: darkgrey; 
-    font-size: 15px;
-    margin-left: 14px;
-}
-
-.ContenedoresDeLogin a:hover{
-    color: aqua;
-}
-
-.ContenedoresDeLogin{
+.ContenedoresDePregunta{
     display: flex;
     justify-content: space-evenly;
-    gap: 50px;
+    width: 100%;
+    height: 30px;
 }
+
+.ContenedoresDePregunta a{
+    color: darkgrey; 
+    font-size: 15px;
+    padding: 10px;
+    text-align:center;
+}
+
+.ContenedoresDePregunta a:hover{
+    color: var(--colorPrincipal);
+}
+
 
 
 /* ================================================================================*/
 /* ===============     F O R M U L A R I O   R E G  I S T E R   ===================*/
 
 
-.Register{
-    width: 40%;
-    height: 500px;
-    background: black;
-    color: white;
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 41px 40px;
+.containerRegister{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 88vh;
+}
+.register h1{text-align: center;font-size: 20px;}
+.register{
+    background-color: var(--colorNegro);
+    width: 380px;
+    height: 450px;
+    padding: 22px;
     font-size: 15px;
+    color: white;
+    box-sizing: border-box;
 }
 
-.bodyRegister{
+.bodyregister{
     margin : 0;
     padding : 0;
     background : url(../images/fondo.jpg);
@@ -731,77 +673,51 @@ vez que se de click en el icono del menu*/
     height: 100vh;
 }
 
-.Register img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px; 
-    left: calc(50% - 50px); /*aca se resta 50% menos os 50px del top para centrarla en el div */
-}
-
-.Register img:hover{
-    box-shadow: 0 0 20px white;
-}
-
-.Register h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
-.Register label{
-    margin: 0;
-    padding: 0;
+.register input{
+    margin-top: 20px;
     display: block;
-    padding: 10px 0 4px;
-}
-
-.Register input{  
     margin: bottom 20px;
     width: 100%;
     font-size: 15px;
-    
 }
-.Register input[type="text"],
-.Register input[type="password"]{  /* Aca lo que hice fue solo modificar los inputs de text y password */
+
+.grup{position: relative;margin-top: 36px;}
+
+.register label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: .3s ;
+    pointer-events: none;
+    color: #424949;
+}
+
+.register input:focus~label,input:valid~label{
+    top: -10px;
+    color: #fff;
+}
+
+
+.register input[type="text"],
+.register input[type="password"]{  /* Aca lo que hice fue solo modificar los inputs de text y password */
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
     outline: none;
     height: 40px;
     color: #fff;
-    
-
 }
-.Register input[type="submit"] {  
-    border: none;
-    outline: none;
-    background: rgba(54, 53, 53, 0.918);
+
+.register button {  
+    width: 100%;
     height: 40px;
     font-size: 18px;
-    border-radius: 15px;
+    border: none;
+    margin-top: 10%;
+    margin-bottom: 10px;
+    cursor: pointer;
     color: #fff;
-}
-
-.Register input[type="submit"]:hover { 
-    background-color: rgba(255, 255, 255, 0.26);
-}
-
-.Register a{
-    text-decoration: none;
-    line-height: 20px;
-    color: darkgrey; 
-    font-size: 15px;
-}
-.ContenedoresDeRegister a:hover{
-    color: aqua;
-}
-
-
-.ContenedoresDeRegister {
-    display: flex;
-    
+    background-color: var(--colorPrincipal);
 }
 
 
@@ -901,13 +817,15 @@ textarea{
 
 /* ====================================================================================================== */
 /* ==================================    T  A  T  U  A  D  O  R  E  S   =================================*/
-.SectionTatuadores{
+
+.backgTatuadores{
     background-color: rgba(146, 145, 145, 0.1);
+    height: 100%;
+    padding: 35px;
 }
 
 .titleSectionTatuadores{
-    text-shadow: 5px 1px 1px rgb(0, 0, 0);
-    color: #d1722a;
+    color: var(#fff);
     width: 100%;
     height: 180px;
     font-size: 35px;
@@ -916,26 +834,24 @@ textarea{
     align-items: center;
 }
 
-.containerPrincipal{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+.ContainTatuadores{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 32px;
+    padding: 15px;
 }
 
-.containerSecundario{
+.cardTatuadores{
     background-color: rgb(255, 251, 251);
     box-shadow: 0 1px 5px  rgba(17, 17, 17, 0.829);
-    width: 36%;
     height: auto;
     border-radius: 25px;
-    transition: 1.1s;
-    margin-bottom: 55px;
+    width: 480px;
+    height: 100%;
 }
 
-.containerSecundario2{
-    margin-top: 35px;
-    margin-bottom: 5%;
-}
+
 
 .ImagenTatuadores{
     border-radius: 10px 10px 0 0;
@@ -946,16 +862,10 @@ textarea{
 
 .ImagenTatuadores img{
     border-radius: 25px 25px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
     height: 45vh;
     width: 100%;
     transition: 1.1s;
 }
-
-
 
 .InfoTatuadores {
     display: flex;
@@ -968,9 +878,7 @@ textarea{
 .ParrafoTatuadores{
     text-align: justify;
     color: #000;
-    margin: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 20px;
 }
 
 
@@ -1017,7 +925,7 @@ textarea{
 }
 
 .C-PortafolioTatuador h1{
-    color: #d1722a;
+    color: var(--colorPrincipal);
     font-size: 3.5em;
     display: flex;
     justify-content: center;
@@ -1060,7 +968,7 @@ textarea{
 }
 .ubictatto h1{
     text-shadow: 1px 3px 80px #000;
-    color: #d1722a;
+    color: var(--colorPrincipal);
     font-size: 3.5em;
     display: flex; 
     justify-content: center;
@@ -1070,4 +978,34 @@ textarea{
 .mapa{
     box-shadow: 1px 3px 20px #000;
     width: 100%;
+}
+
+
+/*------------------  MEDIA QUERIS --------------------*/
+
+@media (max-width:1000px){
+    /*==========================        I  N  D  E  X       ========================*/
+    .ArtistasIndex{grid-template-columns: 1fr}
+    .ParrafArtistass {padding: 5px; text-align: justify; height: 100%; }
+    .P-ContenedorServicios {flex-direction: column;justify-content: flex-start; gap: 25px;}
+    .TitileServicios {height: 183px;}
+    .TattoServicios {margin-left: 0;}
+    .pircingsServicios {margin-right: 0%}
+    .P-Ubicacion {padding: 35px; justify-content: space-evenly;text-align: center;flex-direction: column-reverse}
+    .P-Ubicacion h1{padding: 25px 0 0;}
+
+    .ContainTatuadores{grid-template-columns: 1fr;}
+    .cardTatuadores {width: 500px; transition: 1s;}
+}
+
+@media (max-width:600px){
+    /*==========================        I  N  D  E  X       ========================*/
+    .ArtistasIndex{grid-template-columns: 1fr; padding: 55px 0;}
+    .ArtistasIndex img {width: 350px; height: 400px;}
+    .ParrafArtistass {padding: 5px; text-align: justify; height: 100%; }
+    .pircingsServicios {margin-right: 0%;}
+    .TattoServicios {margin-right: 0;}
+
+    .ContainTatuadores{grid-template-columns: 1fr;}
+    .cardTatuadores {width: 386px;}
 }

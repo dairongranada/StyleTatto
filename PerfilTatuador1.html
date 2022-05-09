@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="images/icoo.ico">
     <title>Style Tatto - Estudio Profesional</title>
+    
+        <!-- Tipo De Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
   
-<!-----------------------------  B A R R A   D E   N A V E G A C I O N   ------------------------------------------------------------------>
-
+<!--------------------------------------  B A R R A   D E   N A V E G A C I O N   --------------------------------------------------------------------------------------->
 <nav>
-  <div>
-    <a href="index.html"><img class="logo"  src="/images/logo.jpg" alt=""></a>
+  <div class="TextNav">
+    <a href="index.html"><img src="images/logo.jpg" alt=""></a>
   </div>
-  <input type="checkbox" id="check">
-  <label for="check" class="bar-btr">
-      <i class="fas fa-bars"></i>
-  </label>
-  <ul class="nav-menu">
-      <li><a class="active"  href="index.html">Inicio  </a></li>
-      <li><a href=""> Tatuadores  </a></li>
-      <li><a href="citas.html"> Citas  </a></li>
+  <div class="openMenu"><i class="fa fa-bars"></i></div>
+  <ul class="mainMenu">
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="tatuadores.html">TATUADORES</a></li>
+      <li><a href="citas.html">CITAS</a></li>
+      <div class="closeMenu"><i class="fa fa-times"></i></div>
   </ul>
 </nav>
+
 <!------------------------------------------------------------------------------------------------------------------------------------------------------>
 
   <div class="AtrasInfoTatuador">
@@ -78,6 +77,12 @@
   <footer class="IamFotter" >
       <h1>© Copyright - Style Tatto - 2022</h1>
   </footer>
-    
+
+  
+    <!---------------------------     S C R I P T S  (JS)  ------------------------------->
+    <script src="https://kit.fontawesome.com/0d35893116.js" crossorigin="anonymous"></script>
+    <script src="js/app.js" ></script>
+    <script src="js/scrollreveal.js" ></script>
+
 </body>
 </html>
