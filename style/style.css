@@ -115,7 +115,7 @@ margin: 20px;
 display: none;
 cursor: pointer;
 }
-.mainMenu .closeMenu{
+.closeMenu{
     font-size: 2rem;
     display: none;
     cursor: pointer;
@@ -144,7 +144,7 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     background: var(--colorNegro);
-    transition: top 1s ease 0s;
+    transition: top 2s ease 0s;
     display: none;
 }
 .mainMenu .closeMenu {
@@ -256,22 +256,21 @@ header{
 
 }
 
-
 .BotonesMelozz{
-    margin-top: 1%;
-    margin-left: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
 
 .btn-1{
-    margin-right: 40px;
     padding: 10px 30px;
     background-color: var(--colorPrincipal);
     color: #fff;
     border-radius:5px;
     cursor: pointer;
     font-weight:600;
-    transition: 1.1s  ;
+    transition: 1.1s;
 }
 
 .btn-1:hover{
@@ -283,7 +282,7 @@ header{
 }
 
 .btn-2{
-    margin-right: 40px;
+
     padding: 10px 30px;
     background-color: var(--colorPrincipal);
     color: #fff;
@@ -825,7 +824,7 @@ textarea{
 }
 
 .titleSectionTatuadores{
-    color: var(#fff);
+    color:#fff;
     width: 100%;
     height: 180px;
     font-size: 35px;
@@ -980,11 +979,11 @@ textarea{
     width: 100%;
 }
 
-
-/*------------------  MEDIA QUERIS --------------------*/
+/*=========================================================================================*/
+/*==========================  M E D I A   Q U E R I  S  ( 1000px ) ========================*/
 
 @media (max-width:1000px){
-    /*==========================        I  N  D  E  X       ========================*/
+    /*=====      I  N  D  E  X    =======*/
     .ArtistasIndex{grid-template-columns: 1fr}
     .ParrafArtistass {padding: 5px; text-align: justify; height: 100%; }
     .P-ContenedorServicios {flex-direction: column;justify-content: flex-start; gap: 25px;}
@@ -994,18 +993,53 @@ textarea{
     .P-Ubicacion {padding: 35px; justify-content: space-evenly;text-align: center;flex-direction: column-reverse}
     .P-Ubicacion h1{padding: 25px 0 0;}
 
+    /*=====    T A T U A D O R E S     ===========*/
     .ContainTatuadores{grid-template-columns: 1fr;}
     .cardTatuadores {width: 500px; transition: 1s;}
+
+
+    /*=====     C I T A S     ======*/
+
+
 }
 
+/*=========================================================================================*/
+/*==========================  M E D I A   Q U E R I  S  ( 600px ) ========================*/
 @media (max-width:600px){
-    /*==========================        I  N  D  E  X       ========================*/
+
+    /*=====   I  N  D  E  X   ====*/
     .ArtistasIndex{grid-template-columns: 1fr; padding: 55px 0;}
+    .BotonesMelozz{grid-template-columns: 1fr;}
     .ArtistasIndex img {width: 350px; height: 400px;}
     .ParrafArtistass {padding: 5px; text-align: justify; height: 100%; }
     .pircingsServicios {margin-right: 0%;}
     .TattoServicios {margin-right: 0;}
+    
 
+    /*===== T A T U A D O R E S  ======*/
+    .titleSectionTatuadores {font-size: 35px;}
     .ContainTatuadores{grid-template-columns: 1fr;}
     .cardTatuadores {width: 386px;}
+
+
+    /*=====     C I T A S     ======*/
+
+}
+
+
+/*=========================================================================================*/
+/*==========================  M E D I A   Q U E R I  S  ( 450px ) ========================*/
+@media (max-width:450px){
+
+    /*=====     I  N  D  E  X    ======*/
+    .ArtistasIndex img {width: 280px; height: 300px;}
+
+    /*=====   T A T U A D O R E S  ======*/
+    .ContainTatuadores{grid-template-columns: 1fr;}
+    .cardTatuadores {width: 300px;}
+
+
+    /*=====     C I T A S     ======*/
+
+
 }
